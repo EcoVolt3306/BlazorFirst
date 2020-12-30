@@ -50,6 +50,7 @@ namespace BlazorFirst
 
             app.UseRouting();
 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();
