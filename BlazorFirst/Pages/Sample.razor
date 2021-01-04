@@ -1,18 +1,57 @@
 ﻿@page "/sample"
 
-<h3>Sample Page</h3>
-<MatButton>Test</MatButton>
-<MatButton OnClick="@Click">Text @ButtonState</MatButton>
-<MatButton Raised="true">Raised</MatButton>
-<MatButton Unelevated="true">Unelevated</MatButton>
-<MatButton Outlined="true">Outlined</MatButton>
-<MatButton Dense="true">Dense</MatButton>
-
-@code
-{
-    string ButtonState = "";
-    void Click(MouseEventArgs e)
-    {
-        ButtonState = "Clicked";
+<style>
+    .head {
+        width: 95%;
+        background-color: cornflowerblue;
+        color: white;
+        text-align:center;
+        margin-left: 2.5%;
+        z-index:1;
+        position:absolute;
+        display:inline-block;
     }
-} 
+    .head-area{
+        display:inline;
+        margin-right:50px;
+    }
+    .body {
+        width: 100%;
+        height: 800px;
+        text-align: center;
+        background-color: antiquewhite;
+        z-index: 0;
+        position: absolute;
+        margin-top:40px;
+    }
+    .st2{
+        margin-top:30px;
+    }
+</style>
+
+
+
+<MatCard>
+    <MatCard class="head">
+        <div class="head-area">
+            라인 선택
+        </div>
+        <div class="head-area">
+            NG 슈트 선택
+        </div>
+        <div class="head-area">
+            참고 라인 선택
+        </div>
+        <MatButton></MatButton>
+    </MatCard>
+    <MatCard Class="body">
+        <span Class="st2">
+            asdasdasd
+        </span>
+    </MatCard>
+
+</MatCard>
+
+@code {
+   
+}
