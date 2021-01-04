@@ -11,7 +11,7 @@
         position:absolute;
         display:inline-block;
     }
-    .head-area{
+    .head-box{
         display:inline;
         margin-right:50px;
     }
@@ -22,10 +22,10 @@
         background-color: antiquewhite;
         z-index: 0;
         position: absolute;
-        margin-top:40px;
+        margin-top:15px;
     }
     .st2{
-        margin-top:30px;
+        margin-top:40px;
     }
 </style>
 
@@ -33,17 +33,35 @@
 
 <MatCard>
     <MatCard class="head">
-        <div class="head-area">
-            라인 선택
+        <div class="head-box">
+            <span>라인 선택</span>
+            <select>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+            </select>
         </div>
         <div class="head-area">
-            NG 슈트 선택
+            <span>NG 슈트 선택</span>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
         </div>
         <div class="head-area">
-            참고 라인 선택
+            <span>참고 라인 선택</span>
+            <select>
+                <option>None</option>
+            </select>
         </div>
-        <MatButton></MatButton>
+        <MatButton Raised="true">
+            []<br />Save
+        </MatButton>
     </MatCard>
+
     <MatCard Class="body">
         <span Class="st2">
             asdasdasd
@@ -53,5 +71,5 @@
 </MatCard>
 
 @code {
-   
+    int intValue;
 }
