@@ -1,4 +1,5 @@
 ﻿/*Bootstrap5 Update Fix*/
 .bs5-fix-nav {
-    margin-left: 25px;
+    padding: .5rem 1rem;
+    padding-left: 1.5rem !important;
 }
