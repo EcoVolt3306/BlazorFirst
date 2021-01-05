@@ -1,30 +1,8 @@
 ﻿@page "/test"
 
-<style>
-    .frame {
-        display: block;
-        max-width: 1000px;
-        max-height: 800px;
-        margin: 50px;
-    }
-</style>
-
-<MatCard Class="frame">
-    <MatButton>Test</MatButton>
-    <MatButton OnClick="ClickHere">Text @ButtonState</MatButton>
-    <MatButton Raised="true">Raised</MatButton>
-    <MatButton Unelevated="true">Unelevated</MatButton>
-    <MatButton Outlined="true">Outlined</MatButton>
-    <MatButton Dense="true">Dense</MatButton>
-</MatCard>
-
-
+<h3> TEST PAGE </h3>
 
 @code
 {
-    string ButtonState = "";
-    void ClickHere(MouseEventArgs e)
-    {
-        ButtonState = "Clicked";
-    }
+
 }

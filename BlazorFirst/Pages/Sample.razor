@@ -3,16 +3,17 @@
 <style>
     .head {
         width: 95%;
+        height: 100px;
         background-color: cornflowerblue;
         color: white;
         text-align:center;
         margin-left: 2.5%;
         z-index:1;
         position:absolute;
-        display:inline-block;
+        display: inline-block;
     }
     .head-box{
-        display:inline;
+        display: inline;
         margin-right:50px;
     }
     .body {
@@ -24,15 +25,15 @@
         position: absolute;
         margin-top:15px;
     }
-    .st2{
-        margin-top:40px;
+    .body-frame{
+        margin-top: 100px;
     }
 </style>
 
 
 
-<MatCard>
-    <MatCard class="head">
+<div class="">
+    <div class="head">
         <div class="head-box">
             <span>라인 선택</span>
             <select>
@@ -42,7 +43,7 @@
                 <option>D</option>
             </select>
         </div>
-        <div class="head-area">
+        <div class="head-box">
             <span>NG 슈트 선택</span>
             <select>
                 <option>1</option>
@@ -51,25 +52,25 @@
                 <option>4</option>
             </select>
         </div>
-        <div class="head-area">
+        <div class="head-box">
             <span>참고 라인 선택</span>
             <select>
                 <option>None</option>
             </select>
         </div>
-        <MatButton Raised="true">
+        <button>
             []<br />Save
-        </MatButton>
-    </MatCard>
+        </button>
+    </div>
 
-    <MatCard Class="body">
-        <span Class="st2">
+    <div Class="body">
+        <span Class="body-frame">
             asdasdasd
         </span>
-    </MatCard>
+    </div>
 
-</MatCard>
+</div>
 
 @code {
-    int intValue;
+    
 }
