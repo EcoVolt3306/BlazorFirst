@@ -1,77 +1,43 @@
 ﻿@page "/sample"
 
 <style>
-    .head {
-        width: 95%;
+    .show-border{
+        border: solid 1px black;
+    }
+    .out-frame {
+        border: solid 1px gray;
+        position: absolute;
+        z-index: -1;
+        margin-top: 30px;
+        border-radius: 5px;
+        width: 85%;
+        height: 900px;
+        margin-left: -10px;
+    }
+
+    .head-frame{
+        border-radius: 5px;
+        background-color: skyblue;
         height: 100px;
-        background-color: cornflowerblue;
-        color: white;
         text-align:center;
-        margin-left: 2.5%;
-        z-index:1;
-        position:absolute;
-        display: inline-block;
     }
-    .head-box{
-        display: inline;
-        margin-right:50px;
-    }
-    .body {
-        width: 100%;
+
+    .body-frame{
+        border-radius: 5px;
         height: 800px;
         text-align: center;
-        background-color: antiquewhite;
-        z-index: 0;
-        position: absolute;
-        margin-top:15px;
-    }
-    .body-frame{
-        margin-top: 100px;
     }
 </style>
 
+<div class="out-frame"></div>
 
-
-<div class="container">
-    <div class="head">
-        <div class="head-box">
-            <span>라인 선택</span>
-            <select>
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
-                <option>D</option>
-            </select>
-        </div>
-        <div class="head-box">
-            <span>NG 슈트 선택</span>
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-            </select>
-        </div>
-        <div class="head-box">
-            <span>참고 라인 선택</span>
-            <select>
-                <option>None</option>
-            </select>
-        </div>
-        <div class="head-box">
-            <button>
-                []<br />Save
-            </button>
-        </div>
-    </div>
-
-    <div Class="body">
-        <span Class="body-frame">
-            asdasdasd
-        </span>
-    </div>
-
+<div class="container-fluid head-frame show-border">
+    HEAD
 </div>
+<div class="container-fluid body-frame">
+    BODY
+</div>
+
 
 @code {
     
