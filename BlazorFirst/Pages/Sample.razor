@@ -4,6 +4,12 @@
     .show-border{
         border: solid 1px black;
     }
+    .head-ma {
+        margin-left: 13%;
+    }
+    .btnSave{
+        margin-bottom: 10px;
+    }
     .out-frame {
         border: solid 1px gray;
         position: absolute;
@@ -15,11 +21,21 @@
         margin-left: -10px;
     }
 
-    .head-frame{
+    .head-frame {
         border-radius: 5px;
         background-color: skyblue;
         height: 100px;
-        text-align:center;
+        text-align: center;
+        padding-top: 17px;
+        display:inline-flex;
+    }
+    .head-select-frame {
+        min-width: 10%;
+        width: 20%;
+    }
+    .head-select{
+        background-color: rgba( 255, 255, 255, 0.5 );
+        border: none;
     }
 
     .body-frame{
@@ -31,9 +47,38 @@
 
 <div class="out-frame"></div>
 
-<div class="container-fluid head-frame show-border">
-    HEAD
+<div class="container-fluid head-frame show-border ">
+    <div class="form-floating head-select-frame">
+        <select class="form-select head-select" id="s1" aria-label="s1">
+            <option value="1">A-LINE</option>
+            <option value="2">B-LINE</option>
+            <option value="3">C-LINE</option>
+            <option value="4">D-LINE</option>
+        </select>
+        <label for="floatingSelect">라인 선택</label>
+    </div>
+    <div class="form-floating head-select-frame head-ma">
+        <select class="form-select head-select" id="s2" aria-label="s2">
+            <option value="1">A-01</option>
+            <option value="2">B-02</option>
+            <option value="3">C-03</option>
+            <option value="4">D-04</option>
+        </select>
+        <label for="floatingSelect">NG 슈트 선택</label>
+    </div>
+    <div class="form-floating head-select-frame head-ma">
+        <select class="form-select head-select" id="s2" aria-label="s2">
+            <option value="1">설정하지 않음</option>
+            <option value="2">설정 함!</option>
+        </select>
+        <label for="floatingSelect">참고 라인 선택</label>
+    </div>
+
+    <button type="button" class="btn btn-primary head-ma btnSave">[]<br />SAVE</button>
+
+
 </div>
+
 <div class="container-fluid body-frame">
     BODY
 </div>
