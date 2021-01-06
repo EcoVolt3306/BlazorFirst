@@ -1,15 +1,7 @@
 ﻿@page "/sample"
 
 <style>
-    .show-border{
-        border: solid 1px black;
-    }
-    .head-ma {
-        margin-left: 13%;
-    }
-    .btnSave{
-        margin-bottom: 10px;
-    }
+    @* Frame *@
     .out-frame {
         border: solid 1px gray;
         position: absolute;
@@ -21,32 +13,64 @@
         margin-left: -10px;
     }
 
+    @* Head Area *@
     .head-frame {
         border-radius: 5px;
         background-color: skyblue;
         height: 100px;
         text-align: center;
         padding-top: 17px;
-        display:inline-flex;
+        display: inline-flex;
     }
     .head-select-frame {
         min-width: 10%;
         width: 20%;
     }
-    .head-select{
+    .head-select {
         background-color: rgba( 255, 255, 255, 0.5 );
         border: none;
     }
-
-    .body-frame{
+    .s1-div{
+        width:30%; height:100%;
+    }
+    @* Body Area *@
+    .body-frame {
         border-radius: 5px;
         height: 800px;
         text-align: center;
+    }
+    .con1-frame {
+        height: 100px; 
+        display:flex;
+        line-height: 5em;
+    }
+    .con2-frame {
+
+    }
+    .con3-frame {
+    }
+
+    @* Custom *@
+    .show-border {
+        border: solid 1px black;
+    }
+    .show-border2{
+        border:dashed 1px blue;
+    }
+    .head-ma {
+        margin-left: 13%;
+    }
+    .btnSave {
+        margin-bottom: 12px;
+    }
+    .color-white{
+        color: white;
     }
 </style>
 
 <div class="out-frame"></div>
 
+@* Head Area *@
 <div class="container-fluid head-frame show-border ">
     <div class="form-floating head-select-frame">
         <select class="form-select head-select" id="s1" aria-label="s1">
@@ -74,23 +98,35 @@
         <label for="floatingSelect">참고 라인 선택</label>
     </div>
 
-    <button type="button" class="btn btn-primary head-ma btnSave">[]<br />SAVE</button>
-
-
+    <button type="button" class="btn btn-primary head-ma btnSave">▲<br />SAVE</button>
 </div>
 
+@* Body Area *@
 <div class="container-fluid body-frame">
-    <div class="show-border" style="height: 100px;">
-        <div style="width:30%; height:100%;" class="show-border">
-            aaa
+
+    <div class="show-border con1-frame">
+        <div class="s1-div show-border2">
+            <span> 분류 계획 </span>
         </div>
-        <button type="button" class="btn btn-primary">A</button>
-        <button type="button" class="btn btn-primary">B</button>
-        <button type="button" class="btn btn-primary">C</button>
+        <div class="s1-div show-border2">
+            <span> 분류 계획 </span>
+        </div>
+        <div style="width:30%; height:100%; min-width:285px;" class="show-border2">
+            <button type="button" class="btn btn-success">계획 변경</button>
+            <button type="button" class="btn btn-secondary">추가</button>
+            <button type="button" class="btn btn-secondary">수정</button>
+            <button type="button" class="btn btn-danger">삭제</button>
+        </div>
+        <div style="width:30%; height:100%;" class="show-border2">
+            <button type="button" class="btn btn-primary">업로드</button>
+            <button type="button" class="btn btn-primary">다운로드</button>
+        </div>
+
+
     </div>
 </div>
 
 
 @code {
-    
+
 }
