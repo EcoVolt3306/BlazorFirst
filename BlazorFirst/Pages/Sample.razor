@@ -39,26 +39,32 @@
         text-align: center;
     }
 
+    #b1-s1, #b1-s2, #b1-s3, #b1-s4, #b1-s5{
+        height: 100%;
+    }
+
     #body1-frame {
         height: 100px;
         display: flex;
         line-height: 5.5em;
     }
     #b1-s1 {
-        width: 25%;
-        height: 100%;
+        width: 30%;
     }
     #b1-s2 {
-        width: 25%;
-        height: 100%;
+        width: 20%;
+        line-height: 2rem;
     }
     #b1-s3 {
         width: 25%;
-        height: 100%;
     }
     #b1-s4 {
-        width: 25%;
-        height: 100%;
+        width: 20%;
+        min-width: 231.31px;
+    }
+    #b1-s5 {
+        width: 13%;
+        min-width: 140.44px;
     }
 
     .con2-frame {
@@ -137,26 +143,27 @@
                 </div>
             </form>
         </div>
-        <div id="b1-s3">
-            <div class="form-floating head-select-frame head-ma">
-                <select class="form-select head-select">
-                    <option value="1">A-01</option>
-                    <option value="2">B-02</option>
-                    <option value="3">C-03</option>
-                    <option value="4">D-04</option>
+        <div id="b1-s3" class="show-border2">
+            <div style="line-height: 2rem; margin-top:10px;">
+                <select class="form-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
                 </select>
-                <label for="floatingSelect">분류 계획 선택</label>
+                <label>분류 계획 선택</label>
             </div>
+
         </div>
-        <div id="b1-s4" style="width:30%; height:100%; min-width:285px;" class="show-border2">
-            <button type="button" class="btn btn-success btn-up">계획 변경</button>
-            <button type="button" class="btn btn-secondary btn-up">추가</button>
-            <button type="button" class="btn btn-secondary btn-up">수정</button>
-            <button type="button" class="btn btn-danger btn-up">삭제</button>
+        <div id="b1-s4" class="show-border2">
+            <button type="button" class="btn btn-success btn-up btn-sm">계획 변경</button>
+            <button type="button" class="btn btn-secondary btn-up btn-sm">추가</button>
+            <button type="button" class="btn btn-secondary btn-up btn-sm">수정</button>
+            <button type="button" class="btn btn-danger btn-up btn-sm">삭제</button>
         </div>
-        <div style="width:13%; height:100%;" class="show-border2 btn-up">
-            <button type="button" class="btn btn-primary btn-up">업로드</button>
-            <button type="button" class="btn btn-primary btn-up">다운로드</button>
+        <div id="b1-s5" class="show-border2">
+            <button type="button" class="btn btn-primary btn-up btn-sm">업로드</button>
+            <button type="button" class="btn btn-primary btn-up btn-sm">다운로드</button>
         </div>
         
 
