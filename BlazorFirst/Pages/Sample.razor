@@ -2,7 +2,7 @@
 
 <style>
     @* Frame *@
-    .out-frame {
+    #out-frame {
         border: solid 1px gray;
         position: absolute;
         z-index: -1;
@@ -14,7 +14,7 @@
     }
 
     @* Head Area *@
-    .head-frame {
+    #head-frame {
         border-radius: 5px;
         background-color: skyblue;
         height: 100px;
@@ -23,27 +23,44 @@
         display: inline-flex;
     }
     .head-select-frame {
-        min-width: 10%;
+        min-width: 131px;
         width: 20%;
+
     }
     .head-select {
         background-color: rgba( 255, 255, 255, 0.5 );
         border: none;
     }
-    .s1-div{
-        width:30%; height:100%;
-    }
+
     @* Body Area *@
-    .body-frame {
+    #body-frame {
         border-radius: 5px;
         height: 800px;
         text-align: center;
     }
-    .con1-frame {
-        height: 100px; 
-        display:flex;
-        line-height: 5em;
+
+    #body1-frame {
+        height: 100px;
+        display: flex;
+        line-height: 5.5em;
     }
+    #b1-s1 {
+        width: 25%;
+        height: 100%;
+    }
+    #b1-s2 {
+        width: 25%;
+        height: 100%;
+    }
+    #b1-s3 {
+        width: 25%;
+        height: 100%;
+    }
+    #b1-s4 {
+        width: 25%;
+        height: 100%;
+    }
+
     .con2-frame {
 
     }
@@ -66,14 +83,17 @@
     .color-white{
         color: white;
     }
+    .btn-up {
+        height: 4rem;
+    }
 </style>
 
-<div class="out-frame"></div>
+<div id="out-frame"></div>
 
 @* Head Area *@
-<div class="container-fluid head-frame show-border ">
+<div id="head-frame" class="container-fluid">
     <div class="form-floating head-select-frame">
-        <select class="form-select head-select" id="s1" aria-label="s1">
+        <select class="form-select head-select">
             <option value="1">A-LINE</option>
             <option value="2">B-LINE</option>
             <option value="3">C-LINE</option>
@@ -82,7 +102,7 @@
         <label for="floatingSelect">라인 선택</label>
     </div>
     <div class="form-floating head-select-frame head-ma">
-        <select class="form-select head-select" id="s2" aria-label="s2">
+        <select class="form-select head-select">
             <option value="1">A-01</option>
             <option value="2">B-02</option>
             <option value="3">C-03</option>
@@ -91,7 +111,7 @@
         <label for="floatingSelect">NG 슈트 선택</label>
     </div>
     <div class="form-floating head-select-frame head-ma">
-        <select class="form-select head-select" id="s2" aria-label="s2">
+        <select class="form-select head-select">
             <option value="1">설정하지 않음</option>
             <option value="2">설정 함!</option>
         </select>
@@ -102,28 +122,46 @@
 </div>
 
 @* Body Area *@
-<div class="container-fluid body-frame">
+<div id="body-frame" class="container-fluid">
 
-    <div class="show-border con1-frame">
-        <div class="s1-div show-border2">
-            <span> 분류 계획 </span>
+    <div id="body1-frame" class="show-border">
+        <div id="b1-s1" class="show-border2">
+            <span>
+                분류 계획 &lt; <span style="color:forestgreen;"><b>1xxx DTK, Korea</b></span> &gt;
+            </span>
         </div>
-        <div class="s1-div show-border2">
-            <span> 분류 계획 </span>
+        <div id="b1-s2" class=" show-border2">
+            <form>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            </form>
         </div>
-        <div style="width:30%; height:100%; min-width:285px;" class="show-border2">
-            <button type="button" class="btn btn-success">계획 변경</button>
-            <button type="button" class="btn btn-secondary">추가</button>
-            <button type="button" class="btn btn-secondary">수정</button>
-            <button type="button" class="btn btn-danger">삭제</button>
+        <div id="b1-s3">
+            <div class="form-floating head-select-frame head-ma">
+                <select class="form-select head-select">
+                    <option value="1">A-01</option>
+                    <option value="2">B-02</option>
+                    <option value="3">C-03</option>
+                    <option value="4">D-04</option>
+                </select>
+                <label for="floatingSelect">분류 계획 선택</label>
+            </div>
         </div>
-        <div style="width:30%; height:100%;" class="show-border2">
-            <button type="button" class="btn btn-primary">업로드</button>
-            <button type="button" class="btn btn-primary">다운로드</button>
+        <div id="b1-s4" style="width:30%; height:100%; min-width:285px;" class="show-border2">
+            <button type="button" class="btn btn-success btn-up">계획 변경</button>
+            <button type="button" class="btn btn-secondary btn-up">추가</button>
+            <button type="button" class="btn btn-secondary btn-up">수정</button>
+            <button type="button" class="btn btn-danger btn-up">삭제</button>
         </div>
-
+        <div style="width:13%; height:100%;" class="show-border2 btn-up">
+            <button type="button" class="btn btn-primary btn-up">업로드</button>
+            <button type="button" class="btn btn-primary btn-up">다운로드</button>
+        </div>
+        
 
     </div>
+    <br style="color: red;" />
 </div>
 
 

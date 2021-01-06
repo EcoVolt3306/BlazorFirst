@@ -1,4 +1,14 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿<style>
+    #logout{
+        margin-left: 30%;
+        margin-top: 200%;
+        text-align: center;
+        text-decoration:none;
+        color:aqua;
+    }
+</style>
+
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand bs5-fix-nav" href="">BlazorFirst</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -33,6 +43,8 @@
             </NavLink>
         </li>
     </ul>
+
+    <button id="logout" type="button" class="btn btn-link">LOG OUT</button>
 </div>
 
 @code {
