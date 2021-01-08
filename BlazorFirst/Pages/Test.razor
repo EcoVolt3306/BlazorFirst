@@ -35,8 +35,8 @@
 
 
 <main id="body-frame" class="container-fluid">
-    <div id="body1-frame" class="row">
-        <div id="body1-section1" class="col-sm-3 show-border2" style="text-align:center;">
+    <div id="body1" class="row">
+        <div id="body1-section1" class="col-sm-3">
             분류 계획 &lt; <span style="color:forestgreen;"><b>@plan</b></span> &gt;
         </div>
         <div id="body1-section2" class="col-sm-2">
@@ -65,10 +65,10 @@
         </div>
     </div>
 
+    <hr class="hr" />
 
 
-
-    <div id="body2-frame" class="row">
+    <div id="body2" class="row">
         <div id="body2-section1" class="col-md-10" style="overflow-x: hidden; overflow-y: scroll; height: 230px;">
             <table class="table table-hover">
                 <thead>
@@ -137,11 +137,13 @@
             <div>
                 <button type="button" class="btn btn-dark">펼쳐 보기</button><br />
             </div>
-            
+
             <button type="button" class="btn btn-dark">비율 일괄 설정</button><br />
             <p>그룹 인덱스 0개는 개별 슈트입니다.</p>
         </div>
     </div>
+
+    <hr class="hr" />
 
     <div id="body3" class="row">
 
@@ -175,13 +177,23 @@
         </div>
 
         <div id="body3-section2" class="col-md-2 show-border">
-            <button type="button" class="btn btn-info">분류코드 이동</button>
-            <button type="button" class="btn btn-success">선택</button>
-            <button type="button" class="btn btn-outline-success">해제</button>
-            <button type="button" class="btn btn-success">분류코드 추가</button>
-            <button type="button" class="btn btn-warning">분류코드 제거</button>
-            <button type="button" class="btn btn-warning">선택</button>
-            <button type="button" class="btn btn-outline-warning">해제</button>
+            <div class="row">
+                <button type="button" class="btn btn-info col-md-11">분류코드 이동</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-success col-md-5">선택</button>
+                <button type="button" class="btn btn-outline-success col-md-5">해제</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-success col-md-11">분류코드 추가</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-warning col-md-11">분류코드 제거</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-warning col-md-5">선택</button>
+                <button type="button" class="btn btn-outline-warning col-md-5">해제</button>
+            </div>
         </div>
 
         <div id="body3-section3" class="col-md-5 show-border2">

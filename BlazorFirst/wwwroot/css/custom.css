@@ -43,12 +43,11 @@
 }
 
 /* --- Body1 Area --- */
-
-#body1-frame {
+#body1 {
     justify-content: center;
     align-items: center;
     word-break: break-all;
-    border-bottom: 1px skyblue solid;
+    margin-top: 5px;
 }
 
 #body1-section1, #body1-section2, #body1-section3, #body1-section4, #body1-section5 {
@@ -56,6 +55,7 @@
 }
 
 #body1-section1 {
+    text-align: center;
 }
 
 #body1-section2 {
@@ -78,10 +78,10 @@
 
 
 /* --- Body2 Area --- */
-#body2-frame {
+#body2 {
     justify-content: center;
     align-items: center;
-    border-bottom: 1px skyblue solid;
+    margin-bottom: 10px;
 }
 #body2-section1{
 
@@ -132,7 +132,6 @@
 .btn-up {
     height: 4rem;
 }
-
-.nowrap {
-    flex-wrap: nowrap !important;
+.hr{
+    border: solid 1px darkblue;
 }
