@@ -18,13 +18,13 @@
         border-radius: 5px;
         background-color: skyblue;
         height: 100px;
+        margin: auto;
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
     }
     .head-select-frame {
         min-width: 131px;
-
     }
     .head-select {
         background-color: rgba( 255, 255, 255, 0.5 );
@@ -34,35 +34,37 @@
     @* Body Area *@
     #body-frame {
         height: 800px;
-        background-color:antiquewhite;
+        background-color: antiquewhite;
+        word-break: break-all;
     }
     #body1-frame {
         height: 100px;
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
+        word-break: break-all;
     }
-    #b1-s1, #b1-s2, #b1-s3, #b1-s4, #b1-s5 {
-        height: 100%;
+    #body1-section1, #body1-section2, #body1-section3, #body1-section4, #body1-section5 {
+        text-align: center;
     }
-    #b1-s1 {
-        width: 30%;
+    #body1-section1 {
     }
-    #b1-s2 {
-        width: 20%;
-        line-height: 2rem;
+    #body1-section2 {
     }
-    #b1-s3 {
-        width: 25%;
+    #body1-section3 {
+        min-width: 158px;
     }
-    #b1-s4 {
-        width: 20%;
-        min-width: 231.31px;
+    #body1-section4 {
+        min-width: 232px;
+        padding: 0px;
     }
-    #b1-s5 {
-        width: 13%;
-        min-width: 140.44px;
+    #body1-section5 {
+        min-width: 165px;
     }
+
+
+
+
 
     #body2-frame {
         height: 250px;
@@ -70,6 +72,8 @@
         align-items: center;
         flex-wrap: nowrap;
     }
+
+
     .con3-frame {
     }
 
@@ -79,9 +83,6 @@
     }
     .show-border2{
         border:dashed 1px blue;
-    }
-    .head-ma {
-        margin-left: 13%;
     }
     .btnSave {
         margin-bottom: 12px;
@@ -93,12 +94,12 @@
         height: 4rem;
     }
     .nowrap {
-        flex-wrap: nowrap;
+        flex-wrap: nowrap !important;
     }
 </style>
 
-<div id="head-frame" class="container-fluid row">
-    <div class="form-floating col-md-2 col-sm-1 head-select-frame">
+<div id="head-frame" class="row container-fluid">
+    <div class="form-floating col-md-3 head-select-frame">
         <select class="form-select head-select">
             <option value="1">A-LINE</option>
             <option value="2">B-LINE</option>
@@ -107,7 +108,7 @@
         </select>
         <label for="floatingSelect">라인 선택</label>
     </div>
-    <div class="form-floating col-md-2 col-sm-1 head-select-frame">
+    <div class="form-floating col-md-3 head-select-frame">
         <select class="form-select head-select">
             <option value="1">A-01</option>
             <option value="2">B-02</option>
@@ -116,14 +117,14 @@
         </select>
         <label for="floatingSelect">NG 슈트 선택</label>
     </div>    
-    <div class="form-floating col-md-2 col-sm-3 head-select-frame">
+    <div class="form-floating col-md-3 head-select-frame">
         <select class="form-select head-select">
             <option value="1">설정 하지 않음</option>
             <option value="2">설정함</option>
         </select>
         <label for="floatingSelect">참고 라인 선택</label>
     </div>
-    <button type="button" class="btn btn-primary head-ma col-md-1 btnSave col-sm-2">▲<br />SAVE</button>
+    <button type="button" class="btn btn-primary col-md-1 btnSave">▲<br />SAVE</button>
 </div>
 
 
@@ -132,14 +133,14 @@
 
 
 <main id="body-frame" class="container-fluid">
-    <div id="body1-frame" class="row show-border">
-        <div class="col-md-3" style="text-align:center;">
+    <div id="body1-frame" class="row">
+        <div id="body1-section1" class="col-md-3 show-border2" style="text-align:center;">
             분류 계획 &lt; <span style="color:forestgreen;"><b>@plan</b></span> &gt;
         </div>
-        <div class="col-md-2">
+        <div id="body1-section2" class="col-md-2 show-border2">
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="col-md-2">
+        <div id="body1-section3" class="col-md-2 show-border2">
             <div class="form-floating">
                 <select class="form-select">
                     <option selected>@plan</option>
@@ -150,17 +151,20 @@
                 <label>분류 계획 선택</label>
             </div>
         </div>
-        <div class="col-md-3">
+        <div id="body1-section4" class="col-md-3 show-border2">
             <button type="button" class="btn btn-success btn-up btn-sm">계획 변경</button>
             <button type="button" class="btn btn-secondary btn-up btn-sm">추가</button>
             <button type="button" class="btn btn-secondary btn-up btn-sm">수정</button>
             <button type="button" class="btn btn-danger btn-up btn-sm">삭제</button>
         </div>
-        <div class="col-md-2">
+        <div id="body1-section5" class="col-md-2 show-border2">
             <button type="button" class="btn btn-primary btn-up btn-sm">업로드</button>
             <button type="button" class="btn btn-primary btn-up btn-sm">다운로드</button>
         </div>
     </div>
+
+
+
 
     <div id="body2-frame" class="row show-border">
         <div class="col-md-11">
