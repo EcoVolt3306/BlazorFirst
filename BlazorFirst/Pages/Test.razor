@@ -1,103 +1,5 @@
 ﻿@page "/"
 
-<style>
-    @* Frame *@
-    @*#out-frame {
-        border: solid 1px gray;
-        position: absolute;
-        z-index: -1;
-        margin-top: 30px;
-        border-radius: 5px;
-        width: 85%;
-        height: 900px;
-        margin-left: -10px;
-    }*@
-
-    @* Head Area *@
-    #head-frame {
-        border-radius: 5px;
-        background-color: skyblue;
-        height: 100px;
-        margin: auto;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-    .head-select-frame {
-        min-width: 131px;
-    }
-    .head-select {
-        background-color: rgba( 255, 255, 255, 0.5 );
-        border: none;
-    }
-
-    @* Body Area *@
-    #body-frame {
-        height: 800px;
-        background-color: antiquewhite;
-        word-break: break-all;
-    }
-    #body1-frame {
-        height: 100px;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        word-break: break-all;
-    }
-    #body1-section1, #body1-section2, #body1-section3, #body1-section4, #body1-section5 {
-        text-align: center;
-    }
-    #body1-section1 {
-    }
-    #body1-section2 {
-    }
-    #body1-section3 {
-        min-width: 158px;
-    }
-    #body1-section4 {
-        min-width: 232px;
-        padding: 0px;
-    }
-    #body1-section5 {
-        min-width: 165px;
-    }
-
-
-
-
-
-    #body2-frame {
-        height: 250px;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-
-
-    .con3-frame {
-    }
-
-    @* Custom *@
-    .show-border {
-        border: solid 1px black;
-    }
-    .show-border2{
-        border:dashed 1px blue;
-    }
-    .btnSave {
-        margin-bottom: 12px;
-    }
-    .color-white{
-        color: white;
-    }
-    .btn-up {
-        height: 4rem;
-    }
-    .nowrap {
-        flex-wrap: nowrap !important;
-    }
-</style>
-
 <div id="head-frame" class="row container-fluid">
     <div class="form-floating col-md-3 head-select-frame">
         <select class="form-select head-select">
@@ -166,16 +68,78 @@
 
 
 
-    <div id="body2-frame" class="row show-border">
-        <div class="col-md-11">
-            START
+    <div id="body2-frame" class="row">
+        <div id="body2-section1" class="col-md-10" style="overflow-x: hidden; overflow-y: scroll; height: 230px;">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">CHUTE ID</th>
+                        <th scope="col">CHUTE 명칭</th>
+                        <th scope="col">종속 라인</th>
+                        <th scope="col">그룹 인덱스</th>
+                        <th scope="col">할당 비율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="col-md-1">
-            <button type="button" class="btn btn-check btn-sm">설정 저장</button>
-            <button type="button" class="btn btn-check btn-sm">펼쳐 보기</button>
-            <button type="button" class="btn btn-check btn-sm">비율 일괄 설정</button>
-            <span style="color:red;">텍스트 내용</span>
-
+        <div id="body2-section2" class="col-md-2">
+            <div><button type="button" class="btn btn-primary">설정 저장</button><br /></div>
+            <div>
+                <button type="button" class="btn btn-dark">펼쳐 보기</button><br />
+            </div>
+            
+            <button type="button" class="btn btn-dark">비율 일괄 설정</button><br />
+            <p>그룹 인덱스 0개는 개별 슈트입니다.</p>
         </div>
     </div>
 </main>

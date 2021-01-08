@@ -3,3 +3,123 @@
     padding: .5rem 1rem;
     padding-left: 1.5rem !important;
 }
+
+/*#out-frame {
+    border: solid 1px gray;
+    position: absolute;
+    z-index: -1;
+    margin-top: 30px;
+    border-radius: 5px;
+    width: 85%;
+    height: 900px;
+    margin-left: -10px;
+}*/
+
+/*Head Area*/
+#head-frame {
+    border-radius: 5px;
+    background-color: skyblue;
+    height: 100px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.head-select-frame {
+    min-width: 131px;
+}
+
+.head-select {
+    background-color: rgba( 255, 255, 255, 0.5 );
+    border: none;
+}
+
+/*Body Area*/
+#body-frame {
+    height: 800px;
+    background-color: antiquewhite;
+    word-break: break-all;
+}
+
+#body1-frame {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    word-break: break-all;
+    border-bottom: 1px skyblue solid;
+}
+
+#body1-section1, #body1-section2, #body1-section3, #body1-section4, #body1-section5 {
+    text-align: center;
+}
+
+#body1-section1 {
+}
+
+#body1-section2 {
+}
+
+#body1-section3 {
+    min-width: 158px;
+}
+
+#body1-section4 {
+    min-width: 232px;
+    padding: 0px;
+}
+
+#body1-section5 {
+    min-width: 165px;
+}
+
+
+
+
+
+#body2-frame {
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px skyblue solid;
+}
+#body2-section1{
+
+}
+#body2-section2 {
+    text-align: center;
+    min-width: 170px;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+
+.con3-frame {
+}
+
+/*Custom*/
+.show-border {
+    border: solid 1px black;
+}
+
+.show-border2 {
+    border: dashed 1px blue;
+}
+
+.btnSave {
+    margin-bottom: 12px;
+}
+
+.color-white {
+    color: white;
+}
+
+.btn-up {
+    height: 4rem;
+}
+
+.nowrap {
+    flex-wrap: nowrap !important;
+}
