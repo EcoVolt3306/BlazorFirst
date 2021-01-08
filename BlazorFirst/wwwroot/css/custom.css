@@ -15,15 +15,13 @@
     margin-left: -10px;
 }*/
 
-/*Head Area*/
+/* --- Head Area --- */
 #head-frame {
     border-radius: 5px;
     background-color: skyblue;
-    height: 100px;
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .head-select-frame {
@@ -35,18 +33,20 @@
     border: none;
 }
 
-/*Body Area*/
+
+
+
 #body-frame {
     height: 800px;
-    background-color: antiquewhite;
+/*    background-color: antiquewhite;*/
     word-break: break-all;
 }
 
+/* --- Body1 Area --- */
+
 #body1-frame {
-    height: 100px;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
     word-break: break-all;
     border-bottom: 1px skyblue solid;
 }
@@ -77,12 +77,10 @@
 
 
 
-
+/* --- Body2 Area --- */
 #body2-frame {
-    height: 250px;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
     border-bottom: 1px skyblue solid;
 }
 #body2-section1{
@@ -96,8 +94,23 @@
 }
 
 
-.con3-frame {
+/* --- Body3 Area --- */
+#body3{
+    height: 440px;
 }
+#body3-section1{
+
+}
+#body3-section2 {
+    text-align: center;
+    min-width: 170px;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+#body3-section3{
+
+}
+
 
 /*Custom*/
 .show-border {

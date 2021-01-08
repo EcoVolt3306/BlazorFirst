@@ -36,13 +36,13 @@
 
 <main id="body-frame" class="container-fluid">
     <div id="body1-frame" class="row">
-        <div id="body1-section1" class="col-md-3 show-border2" style="text-align:center;">
+        <div id="body1-section1" class="col-sm-3 show-border2" style="text-align:center;">
             분류 계획 &lt; <span style="color:forestgreen;"><b>@plan</b></span> &gt;
         </div>
-        <div id="body1-section2" class="col-md-2 show-border2">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="body1-section2" class="col-sm-2">
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="분류 코드 찾기..">
         </div>
-        <div id="body1-section3" class="col-md-2 show-border2">
+        <div id="body1-section3" class="col-sm-2">
             <div class="form-floating">
                 <select class="form-select">
                     <option selected>@plan</option>
@@ -53,13 +53,13 @@
                 <label>분류 계획 선택</label>
             </div>
         </div>
-        <div id="body1-section4" class="col-md-3 show-border2">
+        <div id="body1-section4" class="col-sm-3">
             <button type="button" class="btn btn-success btn-up btn-sm">계획 변경</button>
             <button type="button" class="btn btn-secondary btn-up btn-sm">추가</button>
             <button type="button" class="btn btn-secondary btn-up btn-sm">수정</button>
             <button type="button" class="btn btn-danger btn-up btn-sm">삭제</button>
         </div>
-        <div id="body1-section5" class="col-md-2 show-border2">
+        <div id="body1-section5" class="col-sm-2">
             <button type="button" class="btn btn-primary btn-up btn-sm">업로드</button>
             <button type="button" class="btn btn-primary btn-up btn-sm">다운로드</button>
         </div>
@@ -141,6 +141,145 @@
             <button type="button" class="btn btn-dark">비율 일괄 설정</button><br />
             <p>그룹 인덱스 0개는 개별 슈트입니다.</p>
         </div>
+    </div>
+
+    <div id="body3" class="row">
+
+        <div id="body3-section1" class="col-md-5 show-border2">
+            <div class="row">
+                <div class="col-6">
+                    배정된 분류 코드
+                </div>
+                <div class="col-6">
+                    <input type="email" class="form-control col-6" id="exampleInputEmail1" placeholder="분류 코드 찾기..">
+                </div>
+                <div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">라인 명칭</th>
+                                <th scope="col">슈트 명칭</th>
+                                <th scope="col">점소 코드</th>
+                                <th scope="col">점소 명칭</th>
+                                <th scope="col">지점 코드</th>
+                                <th scope="col">지점 명칭</th>
+                                <th scope="col">도착지 코드</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*여기에 데이터 추가*@
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="body3-section2" class="col-md-2 show-border">
+            <button type="button" class="btn btn-info">분류코드 이동</button>
+            <button type="button" class="btn btn-success">선택</button>
+            <button type="button" class="btn btn-outline-success">해제</button>
+            <button type="button" class="btn btn-success">분류코드 추가</button>
+            <button type="button" class="btn btn-warning">분류코드 제거</button>
+            <button type="button" class="btn btn-warning">선택</button>
+            <button type="button" class="btn btn-outline-warning">해제</button>
+        </div>
+
+        <div id="body3-section3" class="col-md-5 show-border2">
+            <div class="row">
+                <div class="col-6">
+                    분류 코드 리스트
+                </div>
+                <div class="col-6">
+                    <input id="exampleInputEmail1" type="email" class="form-control col-6" placeholder="분류 코드 찾기..">
+                </div>
+                <div style="overflow-x: hidden; overflow-y: scroll; height: 420px;">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">점소 코드</th>
+                                <th scope="col">점소 명칭</th>
+                                <th scope="col">지점 코드</th>
+                                <th scope="col">지점 명칭</th>
+                                <th scope="col">도착지 코드</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
 </main>
 
