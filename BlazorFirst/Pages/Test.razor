@@ -37,10 +37,10 @@
 <main id="body-frame" class="container-fluid">
     <div id="body1" class="row">
         <div id="body1-section1" class="col-sm-3">
-            분류 계획 &lt; <span style="color:forestgreen;"><b>@plan</b></span> &gt;
+            분류 계획 &lt; <span id="plan-name">@plan</span> &gt;
         </div>
         <div id="body1-section2" class="col-sm-2">
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="분류 코드 찾기..">
+            <input id="find-planCode" type="text" class="form-control"  placeholder="분류 코드 찾기..">
         </div>
         <div id="body1-section3" class="col-sm-2">
             <div class="form-floating">
@@ -69,7 +69,7 @@
 
 
     <div id="body2" class="row">
-        <div id="body2-section1" class="col-md-10" style="overflow-x: hidden; overflow-y: scroll; height: 230px;">
+        <div id="body2-section1" class="col-md-10">
             <table class="table table-hover">
                 <thead>
                     <tr>

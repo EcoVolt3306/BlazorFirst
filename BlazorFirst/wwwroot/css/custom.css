@@ -58,7 +58,8 @@
     text-align: center;
 }
 
-#body1-section2 {
+#body1-section2{
+
 }
 
 #body1-section3 {
@@ -74,6 +75,16 @@
     min-width: 165px;
 }
 
+/*분류 계획의 이름 span 태그*/
+#plan-name {
+    color: forestgreen;
+    font-weight: bold;
+    font-size: 20px;
+}
+#find-planCode{
+    border: 0px;
+}
+
 
 
 
@@ -83,12 +94,13 @@
     align-items: center;
     margin-bottom: 10px;
 }
-#body2-section1{
-
+#body2-section1 {
+    height: 230px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 #body2-section2 {
     text-align: center;
-    min-width: 170px;
     flex-direction: row-reverse;
     justify-content: space-evenly;
 }
@@ -134,4 +146,8 @@
 }
 .hr{
     border: solid 1px darkblue;
+}
+
+@media (width <= 1130px) {
+    ...
 }
