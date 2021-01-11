@@ -10,7 +10,7 @@
         </select>
         <label for="floatingSelect">라인 선택</label>
     </div>
-    <div class="form-floating col-md-3 head-select-frame">
+    <div class="form-floating col-md-4 head-select-frame">
         <select class="form-select head-select">
             <option value="1">A-01</option>
             <option value="2">B-02</option>
@@ -19,7 +19,7 @@
         </select>
         <label for="floatingSelect">NG 슈트 선택</label>
     </div>    
-    <div class="form-floating col-md-3 head-select-frame">
+    <div class="form-floating col-md-4 head-select-frame">
         <select class="form-select head-select">
             <option value="1">설정 하지 않음</option>
             <option value="2">설정함</option>
@@ -40,11 +40,11 @@
             분류 계획 &lt; <span id="plan-name">@plan</span> &gt;
         </div>
         <div id="body1-section2" class="col-sm-2">
-            <input id="find-planCode" type="text" class="form-control"  placeholder="분류 코드 찾기..">
+            <input type="text" class="form-control border-0"  placeholder="분류 코드 찾기..">
         </div>
         <div id="body1-section3" class="col-sm-2">
             <div class="form-floating">
-                <select class="form-select">
+                <select class="form-select border-0">
                     <option selected>@plan</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -133,13 +133,11 @@
             </table>
         </div>
         <div id="body2-section2" class="col-md-2">
-            <div><button type="button" class="btn btn-primary">설정 저장</button><br /></div>
-            <div>
-                <button type="button" class="btn btn-dark">펼쳐 보기</button><br />
-            </div>
-
-            <button type="button" class="btn btn-dark">비율 일괄 설정</button><br />
-            <p>그룹 인덱스 0개는 개별 슈트입니다.</p>
+                <button type="button" class="btn btn-primary ma5ud">설정 저장</button>
+                <button type="button" class="btn btn-dark ma5ud">펼쳐 보기</button>
+                <button type="button" class="btn btn-dark ma5ud">비율 일괄 설정</button>
+                
+            <p class="text-danger">* 그룹 인덱스 0개는 개별 슈트입니다.</p>
         </div>
     </div>
 
@@ -149,11 +147,11 @@
 
         <div id="body3-section1" class="col-md-5 show-border2">
             <div class="row">
-                <div class="col-6">
+                <div id="body3-section1-name" class="col-6">
                     배정된 분류 코드
                 </div>
                 <div class="col-6">
-                    <input type="email" class="form-control col-6" id="exampleInputEmail1" placeholder="분류 코드 찾기..">
+                    <input type="email" class="form-control col-6 border-0" id="exampleInputEmail1" placeholder="분류 코드 찾기..">
                 </div>
                 <div>
                     <table class="table table-hover">
@@ -198,11 +196,11 @@
 
         <div id="body3-section3" class="col-md-5 show-border2">
             <div class="row">
-                <div class="col-6">
+                <div id="body3-section3-name" class="col-6">
                     분류 코드 리스트
                 </div>
                 <div class="col-6">
-                    <input id="exampleInputEmail1" type="email" class="form-control col-6" placeholder="분류 코드 찾기..">
+                    <input id="exampleInputEmail1" type="email" class="form-control col-6 border-0" placeholder="분류 코드 찾기..">
                 </div>
                 <div style="overflow-x: hidden; overflow-y: scroll; height: 420px;">
                     <table class="table table-hover">

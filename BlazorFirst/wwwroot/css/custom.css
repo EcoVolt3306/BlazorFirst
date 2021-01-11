@@ -25,12 +25,13 @@
 }
 
 .head-select-frame {
-    min-width: 131px;
+/*    min-width: 131px;*/
 }
 
 .head-select {
     background-color: rgba( 255, 255, 255, 0.5 );
     border: none;
+    max-width: 70%;
 }
 
 
@@ -63,16 +64,16 @@
 }
 
 #body1-section3 {
-    min-width: 158px;
+/*    min-width: 158px;*/
 }
 
 #body1-section4 {
-    min-width: 232px;
+/*    min-width: 232px;*/
     padding: 0px;
 }
 
 #body1-section5 {
-    min-width: 165px;
+/*    min-width: 165px;*/
 }
 
 /*분류 계획의 이름 span 태그*/
@@ -80,9 +81,6 @@
     color: forestgreen;
     font-weight: bold;
     font-size: 20px;
-}
-#find-planCode{
-    border: 0px;
 }
 
 
@@ -115,12 +113,21 @@
 }
 #body3-section2 {
     text-align: center;
-    min-width: 170px;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+
 }
 #body3-section3{
 
+}
+#body3-section1-name, #body3-section3-name{
+    text-align: center;
+    font-size: 16px;
+}
+#body3-section1-name {
+    color:blueviolet
+}
+#body3-section3-name{
+    color:coral;
 }
 
 
@@ -147,7 +154,26 @@
 .hr{
     border: solid 1px darkblue;
 }
+.ma5ud{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
-@media (width <= 1130px) {
-    ...
+/*Media Query*/
+@media (max-width: 1300px) {
+    .head-select {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .head-select {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .head-select {
+        max-width: 100%;
+    }
 }
