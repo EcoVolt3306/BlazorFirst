@@ -1,107 +1,7 @@
 ﻿@page "/sample"
 
-<style>
-    @* Frame *@
-    #out-frame {
-        border: solid 1px gray;
-        position: absolute;
-        z-index: -1;
-        margin-top: 30px;
-        border-radius: 5px;
-        width: 85%;
-        height: 900px;
-        margin-left: -10px;
-    }
-
-    @* Head Area *@
-    #head-frame {
-        border-radius: 5px;
-        background-color: skyblue;
-        height: 100px;
-        text-align: center;
-        padding-top: 17px;
-        display: inline-flex;
-    }
-    .head-select-frame {
-        min-width: 131px;
-        width: 20%;
-
-    }
-    .head-select {
-        background-color: rgba( 255, 255, 255, 0.5 );
-        border: none;
-    }
-
-    @* Body Area *@
-    #body-frame {
-        border-radius: 5px;
-        height: 800px;
-        text-align: center;
-    }
-
-    #b1-s1, #b1-s2, #b1-s3, #b1-s4, #b1-s5{
-        height: 100%;
-    }
-
-    #body1-frame {
-        height: 100px;
-        display: flex;
-        line-height: 5.5em;
-    }
-    #b1-s1 {
-        width: 30%;
-    }
-    #b1-s2 {
-        width: 20%;
-        line-height: 2rem;
-    }
-    #b1-s3 {
-        width: 25%;
-    }
-    #b1-s4 {
-        width: 20%;
-        min-width: 231.31px;
-    }
-    #b1-s5 {
-        width: 13%;
-        min-width: 140.44px;
-    }
-
-    .con2-frame {
-
-    }
-    .con3-frame {
-    }
-
-    @* Custom *@
-    .show-border {
-        border: solid 1px black;
-    }
-    .show-border2{
-        border:dashed 1px blue;
-    }
-    .head-ma {
-        margin-left: 13%;
-    }
-    .btnSave {
-        margin-bottom: 12px;
-    }
-    .color-white{
-        color: white;
-    }
-    .btn-up {
-        height: 4rem;
-    }
-</style>
-
-
-
-
-<div id="out-frame"></div>
-
-@* Head Area *@
-<div id="head-frame" class="container-md">
-    <div class="form-floating head-select-frame">
+<div id="head-frame" class="row container-fluid">
+    <div class="form-floating col-sm-3 head-select-frame ma5ud">
         <select class="form-select head-select">
             <option value="1">A-LINE</option>
             <option value="2">B-LINE</option>
@@ -110,7 +10,7 @@
         </select>
         <label for="floatingSelect">라인 선택</label>
     </div>
-    <div class="form-floating head-select-frame head-ma">
+    <div class="form-floating col-sm-3 head-select-frame ma5ud">
         <select class="form-select head-select">
             <option value="1">A-01</option>
             <option value="2">B-02</option>
@@ -119,65 +19,289 @@
         </select>
         <label for="floatingSelect">NG 슈트 선택</label>
     </div>
-    <div class="form-floating head-select-frame head-ma">
+    <div class="form-floating col-sm-4 head-select-frame ma5ud">
         <select class="form-select head-select">
-            <option value="1">설정하지 않음</option>
-            <option value="2">설정 함!</option>
+            <option value="1">설정 하지 않음</option>
+            <option value="2">설정함</option>
         </select>
         <label for="floatingSelect">참고 라인 선택</label>
     </div>
+    <div id="head-section1" class="col-sm-1">
+        <button type="button" class="btn btn-primary btnSave ma5ud">▲<br />SAVE</button>
+    </div>
 
-    <button type="button" class="btn btn-primary head-ma btnSave">▲<br />SAVE</button>
 </div>
 
-@* Body Area *@
-<div id="body-frame" class="container-fluid">
 
-    <div id="body1-frame" class="show-border">
-        <div id="b1-s1" class="show-border2">
-            <span>
-                분류 계획 &lt; <span style="color:forestgreen;"><b>1xxx DTK, Korea</b></span> &gt;
-            </span>
+
+
+
+
+<main id="body-frame" class="container-fluid">
+    <div id="body1" class="row">
+        <div id="body1-section1" class="col-sm-3">
+            분류 계획 &lt; <span id="plan-name">@plan</span> &gt;
         </div>
-        <div id="b1-s2" class=" show-border2">
-            <form>
-                <div class="mb-3">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-            </form>
+        <div id="body1-section2" class="col-sm-2">
+            <input type="text" class="form-control" placeholder="분류 코드 찾기..">
         </div>
-        <div id="b1-s3" class="show-border2">
-            <div style="line-height: 2rem; margin-top:10px;">
+        <div id="body1-section3" class="col-sm-2">
+            <div class="form-floating">
                 <select class="form-select">
-                    <option selected>Open this select menu</option>
+                    <option selected>@plan</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
                 <label>분류 계획 선택</label>
             </div>
-
         </div>
-        <div id="b1-s4" class="show-border2">
+
+
+
+
+        <div id="body1-section4" class="col-sm-3">
             <button type="button" class="btn btn-success btn-up btn-sm">계획 변경</button>
             <button type="button" class="btn btn-secondary btn-up btn-sm">추가</button>
             <button type="button" class="btn btn-secondary btn-up btn-sm">수정</button>
             <button type="button" class="btn btn-danger btn-up btn-sm">삭제</button>
         </div>
-        <div id="b1-s5" class="show-border2">
+        <div id="body1-section5" class="col-sm-2">
             <button type="button" class="btn btn-primary btn-up btn-sm">업로드</button>
             <button type="button" class="btn btn-primary btn-up btn-sm">다운로드</button>
         </div>
-        
+
+
+
+
 
     </div>
-    <br style="color: red;" />
-</div>
-<div class="show-border container-md">
-    aa
-</div>
+
+    <hr class="hr" />
 
 
-@code {
+    <div id="body2" class="row">
+        <div id="body2-section1" class="col-md-10">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">CHUTE ID</th>
+                        <th scope="col">CHUTE 명칭</th>
+                        <th scope="col">종속 라인</th>
+                        <th scope="col">그룹 인덱스</th>
+                        <th scope="col">할당 비율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">A-01</th>
+                        <td>A-01</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>설정하지 않음</option>
+                                <option value="1">설정 OK</option>
+                            </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="body2-section2" class="col-md-2">
+            <button type="button" class="btn btn-primary ma5ud">설정 저장</button><br />
+            <button type="button" class="btn btn-dark ma5ud">펼쳐 보기</button><br />
+            <button type="button" class="btn btn-dark ma5ud">비율 일괄 설정</button><br />
 
+            <p id="body2-section2-text" class="text-danger">* 그룹 인덱스 0개는 개별 슈트입니다.</p>
+        </div>
+    </div>
+
+    <hr class="hr" />
+
+    <div id="body3" class="row">
+
+        <div id="body3-section1" class="col-md-5">
+            <div class="row">
+                <div id="body3-section1-name" class="col-6">
+                    배정된 분류 코드
+                </div>
+                <div class="col-6">
+                    <input type="email" class="form-control col-6" id="exampleInputEmail1" placeholder="분류 코드 찾기..">
+                </div>
+                <div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">라인 명칭</th>
+                                <th scope="col">슈트 명칭</th>
+                                <th scope="col">점소 코드</th>
+                                <th scope="col">점소 명칭</th>
+                                <th scope="col">지점 코드</th>
+                                <th scope="col">지점 명칭</th>
+                                <th scope="col">도착지 코드</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*여기에 데이터 추가*@
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="body3-section2" class="col-md-2">
+
+            <button type="button" class="btn btn-info col-md-11 ma5ud body3-btn1">분류코드 이동</button>
+
+            <button type="button" class="btn btn-success col-md-5 ma5ud body3-btn2">선택</button>
+            <button type="button" class="btn btn-outline-success col-md-5 ma5ud body3-btn2">해제</button>
+
+            <button type="button" class="btn btn-success col-md-11 ma5ud body3-btn1">분류코드 추가</button>
+
+            <button type="button" class="btn btn-warning col-md-11 ma5ud body3-btn1">분류코드 제거</button>
+
+            <button type="button" class="btn btn-warning col-md-5 ma5ud body3-btn2">선택</button>
+            <button type="button" class="btn btn-outline-warning col-md-5 ma5ud body3-btn2" style="color:chocolate">해제</button>
+        </div>
+
+        <div id="body3-section3" class="col-md-5">
+            <div class="row">
+                <div id="body3-section3-name" class="col-6">
+                    분류 코드 리스트
+                </div>
+                <div class="col-6">
+                    <input id="exampleInputEmail1" type="email" class="form-control col-6" placeholder="분류 코드 찾기..">
+                </div>
+                <div style="overflow-x: hidden; overflow-y: scroll; height: 420px;">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">점소 코드</th>
+                                <th scope="col">점소 명칭</th>
+                                <th scope="col">지점 코드</th>
+                                <th scope="col">지점 명칭</th>
+                                <th scope="col">도착지 코드</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">10033</th>
+                                <td>김포출장소</td>
+                                <td>10033</td>
+                                <td>김포출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">30265</th>
+                                <td>D&Shop(인성)</td>
+                                <td>10084</td>
+                                <td>도봉출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">30266</th>
+                                <td>D&Shop(인성)</td>
+                                <td>10084</td>
+                                <td>도봉출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10084</th>
+                                <td>도봉출장소</td>
+                                <td>10084</td>
+                                <td>도봉출장소</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10091</th>
+                                <td>도봉센터</td>
+                                <td>10091</td>
+                                <td>도봉출장소</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10303</th>
+                                <td>3PL_굿프랜드</td>
+                                <td>10120</td>
+                                <td>3PL영업2팀(지점)</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10248</th>
+                                <td>3PL냉장</td>
+                                <td>10120</td>
+                                <td>3PL영업2팀(지점)</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10249</th>
+                                <td>3PL냉장택배</td>
+                                <td>10120</td>
+                                <td>3PL영업2팀(지점)</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10389</th>
+                                <td>3PL성남택배</td>
+                                <td>10120</td>
+                                <td>3PL영업2팀(지점)</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10208</th>
+                                <td>3PL성남센터</td>
+                                <td>10120</td>
+                                <td>3PL영업2팀(지점)</td>
+                                <td>000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+@code
+{
+    string plan = "1xxx DTK, Korea";
 }
