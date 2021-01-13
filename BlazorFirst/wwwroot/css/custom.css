@@ -57,10 +57,11 @@
 
 #body1-section1 {
     text-align: center;
+    line-height: 60px;
 }
 
 #body1-section2{
-
+    padding-top: 12px;
 }
 
 #body1-section3 {
@@ -164,31 +165,36 @@
 
 
     #body1-section1 {
-        width: 40%;
+        width: 70%;
+        margin-bottom: 5px;
+        line-height: 35px;
     }
     #body1-section2 {
         width: 30%;
+        margin-bottom: 5px;
+        padding-top: 0px;
     }
     #body1-section3 {
-        width: 30%;
+        width: 40%;
+        padding-top: 10px;
     }
     #body1-section4 {
-        width: 50%;
+        width: 35%;
         margin-top: 5px;
     }
     #body1-section5 {
-        width: 50%;
+        width: 25%;
         margin-top: 5px;
     }
 
     .head-select-frame{
         padding-right: 0px;
-        width: 33%;
+        width: 30%;
+    }
+    .head-select{
+        max-width: 100%;
     }
 
-/*    .head-select {
-        max-width: 100%;
-    }*/
 }
 
 
